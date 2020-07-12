@@ -23,16 +23,17 @@ public class Door : MonoBehaviour
     /// <summary>
     /// 相机组件
     /// </summary>
-    private Camera camera = null;
+    public GameObject player;
 
     public GameObject livingRoomDoorTip;
     public GameObject toiletDoorTip;
+    public GameObject closeTip;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        camera = FindObjectOfType<Camera>();
+        //camera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
@@ -41,14 +42,21 @@ public class Door : MonoBehaviour
         if (Input.GetKeyUp("f"))
         {
             //计算距离
-            if ((this.transform.position - camera.transform.position).sqrMagnitude > SENSITIVITY) return;
+            if ((this.transform.position - player.transform.position).sqrMagnitude > SENSITIVITY) return;
             OpenOrClose();
+
         }
 
+
+
         //提示是否可见
-        bool isTipVisible = ((this.transform.position - camera.transform.position).sqrMagnitude < SENSITIVITY) && !doorStatus;
-        livingRoomDoorTip.SetActive(isTipVisible);
-        toiletDoorTip.SetActive(isTipVisible);
+        bool isOpenTipVisible = ((this.transform.position - player.transform.position).sqrMagnitude < SENSITIVITY) && !doorStatus;
+        livingRoomDoorTip.SetActive(isOpenTipVisible);
+        toiletDoorTip.SetActive(isOpenTipVisible);
+
+        bool isCloseTipVisible = ((this.transform.position - player.transform.position).sqrMagnitude < SENSITIVITY) && doorStatus;
+        closeTip.SetActive(isCloseTipVisible);
+
     }
 
     /// <summary>
@@ -113,6 +121,18 @@ public class Door : MonoBehaviour
         else
         {
             Open();
+        }
+    }
+
+    private void OnGUI()
+    {
+        if (GUILayout.Button("开门"))
+        {
+            Open();
+        }
+        else if (GUILayout.Button("关门"))
+        {
+            Close();
         }
     }
 

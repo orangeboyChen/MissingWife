@@ -7,54 +7,75 @@ public class ToiletInvisibleDoor : MonoBehaviour
 {
     private bool status = false;
 
-    private Animation animation;
+    private Animator animator;
 
-    public String animationName = "InvisibleDoor";
 
     // Start is called before the first frame update
     void Start()
     {
-        animation = GetComponent<Animation>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        Close();
-    }
-
-    public void OnInteract()
     {
 
     }
 
     public void Open()
     {
+        //片段
+        AnimatorClipInfo[] temps = animator.GetCurrentAnimatorClipInfo(0);
+        AnimatorClipInfo clipInfo = new AnimatorClipInfo();
+        if (temps.Length > 0)
+        {
+            clipInfo = temps[0];
+        }
+
+        //设置、播放动画
+        animator.enabled = true;
+        animator.StartPlayback();
+        animator.speed = -1;
+        animator.Play(clipInfo.clip.name, 0, 1);
+
+        //改变状态
         status = true;
-        animation[animationName].speed = 1;
-        animation.Play(animationName);
+
     }
 
     public void Close()
     {
+        //片段
+        AnimatorClipInfo[] temps = animator.GetCurrentAnimatorClipInfo(0);
+        AnimatorClipInfo clipInfo = new AnimatorClipInfo();
+        if (temps.Length > 0)
+        {
+            clipInfo = temps[0];
+        }
+
+        //设置、播放动画
+        animator.StopPlayback();
+        animator.enabled = true;
+        animator.speed = 1;
+        animator.Play(clipInfo.clip.name);
+
+        //改变状态
         status = false;
-        animation[animationName].speed = -1;
-        animation[animationName].time = animation[animationName].length;
-        animation.Play(animationName);
+
     }
 
     private void OnGUI()
     {
-        if (GUILayout.Button("2333"))
+        if (GUILayout.Button("开隐藏门"))
         {
             Open();
         }
+        else if (GUILayout.Button("关隐藏门"))
+        {
+            Close();
+        }
     }
 
-    private void OnMouseDown()
-    {
-        Open();
-    }
 
 
 

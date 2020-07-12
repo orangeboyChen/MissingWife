@@ -59,4 +59,6 @@ public class ToiletLightSwitch : MonoBehaviour
         }
         isLightOpened = !isLightOpened;
     }
+
+
 }
