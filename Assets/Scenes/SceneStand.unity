@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 160123690}
   - component: {fileID: 160123689}
   - component: {fileID: 160123691}
+  - component: {fileID: 160123692}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: LivingRoomLights
@@ -800,6 +801,22 @@ MonoBehaviour:
   showAdditionalSettings: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+--- !u!114 &160123692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160123688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!1001 &171121114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83720,6 +83737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 422897661}
+  - component: {fileID: 422897664}
   - component: {fileID: 422897663}
   - component: {fileID: 422897662}
   m_Layer: 0
@@ -83914,6 +83932,22 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &422897664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422897660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!1 &436312690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100026, guid: 47af50246352ed14da4ade618d736175,
@@ -88783,6 +88817,7 @@ GameObject:
   - component: {fileID: 1158763616}
   - component: {fileID: 1158763615}
   - component: {fileID: 1158763617}
+  - component: {fileID: 1158763618}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: LivingRoomLights
@@ -88975,6 +89010,22 @@ MonoBehaviour:
   showAdditionalSettings: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+--- !u!114 &1158763618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158763614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!1 &1162574753
 GameObject:
   m_ObjectHideFlags: 0
@@ -90770,6 +90821,7 @@ GameObject:
   - component: {fileID: 1442797553}
   - component: {fileID: 1442797552}
   - component: {fileID: 1442797554}
+  - component: {fileID: 1442797555}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: LivingRoomLights
@@ -90962,6 +91014,22 @@ MonoBehaviour:
   showAdditionalSettings: 0
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+--- !u!114 &1442797555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442797551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!1 &1508675991
 GameObject:
   m_ObjectHideFlags: 0
@@ -94295,6 +94363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!4 &1971512048
 Transform:
   m_ObjectHideFlags: 0
@@ -98964,6 +99036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117144084232446498}
+  - component: {fileID: 2711880731008215763}
   - component: {fileID: 6348749517639754720}
   - component: {fileID: 4092885286037880302}
   - component: {fileID: 2711880731008215762}
@@ -98988,6 +99061,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2711880731008215763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711880731008215761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!23 &2718255833081366382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101947,6 +102036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6132832149819724280}
+  - component: {fileID: 5584729353332808438}
   - component: {fileID: 2946107818063422077}
   - component: {fileID: 445398356389066242}
   - component: {fileID: 5584729353332808437}
@@ -101971,6 +102061,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5584729353332808438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584729353332808436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!33 &5636947903943449527
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -103536,6 +103642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5508117708277472626}
+  - component: {fileID: 7240182203581241767}
   - component: {fileID: 6900566307390760334}
   - component: {fileID: 1735501979978931450}
   - component: {fileID: 7240182203581241766}
@@ -103560,6 +103667,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7240182203581241767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240182203581241765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!23 &7329827035486637328
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104435,6 +104558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8288425572430126574}
+  - component: {fileID: 8285533889363388086}
   - component: {fileID: 5453689193066157622}
   - component: {fileID: 7158750637296188210}
   - component: {fileID: 8285533889363388085}
@@ -104459,6 +104583,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &8285533889363388086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8285533889363388084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b82074686f801b4eb86cb2ea6be323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaxIntensity: 0
+  lightMinIntensity: 5
+  lightStep: 5
+  lightTwinklingTime: 0.02
 --- !u!4 &8288425572430126574
 Transform:
   m_ObjectHideFlags: 0
